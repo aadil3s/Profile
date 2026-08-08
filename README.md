@@ -1,36 +1,54 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Aadil Shah - Portfolio
 
-## Getting Started
+Personal portfolio site for Aadil Shah, a final-year Bachelor of Cybersecurity and Behaviour student at Western Sydney University, targeting SOC analyst and cybersecurity roles in Sydney.
 
-First, run the development server:
+Live sections cover background, technical toolkit, selected work, experience, certifications, education and contact details.
+
+## Stack
+
+- Next.js 16 (App Router)
+- TypeScript
+- Tailwind CSS v4
+- No runtime dependencies beyond React and Next
+
+## Running locally
 
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+The site runs at http://localhost:3000.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Editing content
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+All site content lives in a single file: `src/data/portfolio.ts`. Update the exported objects there and every section picks the changes up. Nothing is hardcoded inside the components.
 
-## Learn More
+| Export | Controls |
+| --- | --- |
+| `profile` | Name, role, tagline, contact details, availability badge, about text |
+| `socials` | Icon links in the hero, contact card and footer |
+| `facts` | Quick-reference card in the About section |
+| `stats` | Figure strip under the hero |
+| `skills` | Technical toolkit grid, grouped by category |
+| `projects` | Project cards, with `featured: true` spanning full width |
+| `experience` | Timeline, split by `category` into security and additional work |
+| `certifications` | Certification cards, with `inProgress: true` for unfinished items |
+| `education`, `leadership` | Education and leadership section |
 
-To learn more about Next.js, take a look at the following resources:
+## Resume
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+`public/Aadil_Shah_Resume.pdf` backs the download button. It is exported from the source `.docx`, so re-export and replace it after any edit to the resume.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Notes
 
-## Deploy on Vercel
+- Light and dark themes follow the system setting and can be toggled manually. The choice persists in `localStorage`.
+- Scroll reveal animations are disabled automatically for visitors with `prefers-reduced-motion` set.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Build
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+```bash
+npm run build
+```
+
+Output is fully static and deploys to Vercel, Netlify, GitHub Pages or any static host.
