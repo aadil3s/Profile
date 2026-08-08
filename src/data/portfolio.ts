@@ -7,7 +7,6 @@ export const profile = {
     "I build the detections a SOC runs on: SIEM pipelines, correlation rules, and attack timelines reconstructed from raw logs.",
   location: "Sydney, NSW",
   email: "aadil.shah2019@gmail.com",
-  phone: "+61 452 627 084",
   /** PDF exported from Aadil_Shah_Resume.docx. Re-export after editing the docx. */
   resumeUrl: "/Aadil_Shah_Resume.pdf",
   /** Shows a green pulsing dot in the hero. Set to null to hide the badge. */

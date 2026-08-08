@@ -1,5 +1,5 @@
 import { profile } from "@/data/portfolio";
-import { ArrowUpRightIcon, PhoneIcon } from "./icons";
+import { ArrowUpRightIcon } from "./icons";
 import Reveal from "./Reveal";
 import SocialLinks from "./SocialLinks";
 
@@ -42,14 +42,7 @@ export default function Contact() {
               </a>
             </div>
 
-            <div className="mt-6 flex flex-wrap items-center justify-center gap-x-6 gap-y-3 text-sm text-muted">
-              <a
-                href={`tel:${profile.phone.replace(/\s/g, "")}`}
-                className="inline-flex items-center gap-2 transition-colors hover:text-foreground"
-              >
-                <PhoneIcon className="h-4 w-4" />
-                {profile.phone}
-              </a>
+            <div className="mt-6 flex justify-center">
               <SocialLinks size="sm" />
             </div>
           </div>
